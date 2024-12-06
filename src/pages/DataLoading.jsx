@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCSVData, setError } from "../app/slices/dataSlice";
 import csv from "csvtojson";
+import TestFile from './test.csv'
 
 const DataLoading = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,9 @@ const DataLoading = () => {
     <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6">
       <h1 className="text-2xl font-bold mb-4">Data Loading</h1>
 
+<br />
+<a className="inline-block px-6 py-2 text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md transition duration-300" href={TestFile} download="Test csv File">Download csv file</a>
+<br />
       <input
         type="file"
         accept=".csv"
